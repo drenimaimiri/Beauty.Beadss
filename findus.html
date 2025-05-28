@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Leaflet Routing: User to Destination</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <style>
+    #map {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Routing Machine JS -->
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+<script>
+  var map = L.map('map').fitWorld();
+
+  // Add OpenStreetMap tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Destination coordinates (example: Gothenburg, Sweden)
+  var destination = L.latLng(42.65223532614695, 21.17588420085771);
+
+  // Function to handle user's location
+  function onLocationFound(e) {
+    var userLocation = e.latlng;
+
+    // Add marker at user's location
+    L.marker(userLocation).addTo(map)
+      .bindPopup("You are here").openPopup();
+
+    // Add routing control from user's location to destination
+    L.Routing.control({
+      waypoints: [
+        userLocation,
+        destination
+      ],
+      routeWhileDragging: true
+    }).addTo(map);
+  }
+
+  // Function to handle location errors
+  function onLocationError(e) {
+    alert(e.message);
+  }
+
+  // Request user's location
+  map.locate({setView: true, maxZoom: 16});
+
+  // Event listeners for location found/error
+  map.on('locationfound', onLocationFound);
+  map.on('locationerror', onLocationError);
+
+</script>
+
+</body>
+</html>
