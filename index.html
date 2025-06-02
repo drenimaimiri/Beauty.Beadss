@@ -1,121 +1,125 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-white-100">
 
-    <nav class="bg-pink-200">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div class="relative flex h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <!-- Mobile menu button-->
-              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
-             
-                <span class="sr-only">Open main menu</span>
-                <!--
-                  Icon when menu is closed.
-      
-                  Menu open: "hidden", Menu closed: "block"
-                -->
-                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-                <!--
-                  Icon when menu is open.
-      
-                  Menu open: "block", Menu closed: "hidden"
-                -->
-                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex shrink-0 items-center">
-                <img class="h-8 w-auto" src="images/IMG_1037 (1).jpeg" alt="Your Company">
-              </div>
-              <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4">
-                 
-                    <a href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-gray-800">Home</a>
-                  <a href="holiday.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Holiday themed</a>
-                  <a href="summer.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Summer themed</a>
-                  <a href="classic.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Classic themed</a>
-                   <a href="phonecharms.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Phone charms</a>
-                  <a href="findus.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Find Us</a>
-                </div>
-              </div>
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-             
-              
-                <span class="sr-only">View notifications</span>
-             
-              </button>
-      
-             
-      
-                <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-             
-              </div>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Beads</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-pink-50">
+
+  <!-- Navigation -->
+  <nav class="bg-pink-200">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-      
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="space-y-1 px-2 pt-2 pb-3">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <img class="h-8 w-auto" src="images/IMG_1037 (1).jpeg" alt="Beauty Beads Logo">
           </div>
-        </div>
-      </nav>
-      <div>
-   <div class="flex items-center justify-center min-h-screen bg-pink-50 p-6">
-        <div class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl">
-          
-          <!-- Image -->
-          <div class="md:w-1/2">
-            <img src="images/IMG_1037 (1).jpeg" alt="Product Display" class="w-full h-full object-cover rounded-l-2xl md:rounded-none">
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Home</a>
+              <a href="findus.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800">Find Us</a>
+            </div>
           </div>
-      
-          <!-- Text Content -->
-          <div class="md:w-1/2 p-8 space-y-6">
-            <h2 class="text-3xl font-bold text-pink-600">Mirë se vini në Beauty Beads ✨</h2>
-            
-            <p class="text-gray-700 leading-relaxed">
-              Vendi ku artizanati bashkohet me stilin modern për të krijuar stoli unike dhe plot kuptim. 
-              Ne realizojmë me dorë stoli për qafë, byzylykë, vathë dhe aksesorë të personalizuar, të dizajnuara për të reflektuar personalitetin dhe stilin tuaj.
-            </p>
-            
-            <ul class="text-gray-600 space-y-2">
-              <li>💎 Produkte të personalizuara sipas porosisë</li>
-              <li>💎 Dizajne unike dhe të veçanta</li>
-              <li>💎 Punuar me dorë, me shumë dashuri</li>
-            </ul>
-            
-            <p class="text-gray-700">
-              🛒 Na kontakto në <strong>045-844-769</strong> ose <strong>@beauty.beadss_</strong> dhe bëj pjesë të koleksionit tënd një stol unik që flet për ty!
-            </p>
-          </div>
-      
         </div>
       </div>
-      
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <div class="flex items-center justify-center bg-pink-50 p-6 py-12">
+    <div class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl">
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="images/IMG_1037 (1).jpeg" alt="Beauty Beads Jewelry Display"
+          class="w-full h-full object-cover rounded-l-2xl md:rounded-none">
+      </div>
+      <!-- Text Content -->
+      <div class="md:w-1/2 p-8 space-y-6">
+        <h2 class="text-3xl font-bold text-pink-600">Mirë se vini në Beauty Beads ✨</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Vendi ku artizanati bashkohet me stilin modern për të krijuar stoli unike dhe plot kuptim.
+          Ne realizojmë me dorë stoli për qafë, byzylykë, vathë dhe aksesorë të personalizuar, të dizajnuara për të
+          reflektuar personalitetin dhe stilin tuaj.
+        </p>
+        <ul class="text-gray-600 space-y-2">
+          <li>💎 Produkte të personalizuara sipas porosisë</li>
+          <li>💎 Dizajne unike dhe të veçanta</li>
+          <li>💎 Punuar me dorë, me shumë dashuri</li>
+        </ul>
+        <p class="text-gray-700">
+          🛒 Na kontakto në <strong>045-844-769</strong> ose <strong>@beauty.beadss_</strong> dhe bëj pjesë të
+          koleksionit tënd një stol unik që flet për ty!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-pink-600 mb-8 text-center">Koleksioni ynë ✨</h2>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+    
+     
+      <!-- Card 3 -->
+      <div
+        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <a href="braclets.html">
+          <img src="https://www.sugarhighcollection.com.au/cdn/shop/products/SugarHighCollection-BeadedBracelet-MultiColour01.jpg?v=1675984922" alt="Byzylykë" class="w-full h-48 object-cover">
+        </a>
+        
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-pink-600">Byzylykë</h3>
+          <p class="text-gray-600 text-sm mt-2">Koleksion i punuar me dorë për të shkëlqyer.</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+        <div
+        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <a href="classic.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwL9JFcjnFaWJL9N0cSiB0k3vMsSe1o1cwiQ&s" alt="Qafore" class="w-full h-48 object-cover">
+        </a>
+        
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-pink-600">Qafore</h3>
+          <p class="text-gray-600 text-sm mt-2">Koleksion i punuar me dorë për të shkëlqyer.</p>
+        </div>
+      </div>
+      <!-- Card 5 -->
+          <div
+        class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <a href="phonecharms.html">
+          <img src="https://hookedbylou.com/cdn/shop/files/cute-pink-and-pearl-y2k-beaded-phone-charm-663.jpg?v=1707328118&width=1946" alt="phonecharms" class="w-full h-48 object-cover">
+        </a>
+        
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-pink-600">Phone Charms</h3>
+          <p class="text-gray-600 text-sm mt-2">Koleksion i punuar me dorë për të shkëlqyer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
